@@ -1,0 +1,9 @@
+{
+  "app": {
+    "description": "DESCRIPCIÓN APP",
+    "footer": {
+      "made-by": "Hecho con ❤️ por <1>Josan</1>"
+    },
+    "title": "TÍTULO APP"
+  }
+}
