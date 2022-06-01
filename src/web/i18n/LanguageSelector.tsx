@@ -19,7 +19,7 @@ export default function LanguageSelector(): ReactElement {
   return (
     <label className="inline-block rounded-lg">
       <select
-        className=" bg-white capitalize rounded-lg border-secondary shadow ringed-focus focus:border-secondary focus:ring-inset active:shadow-none"
+        className=" bg-sky-50 hover:bg-sky-200 capitalize rounded-lg border-secondary shadow ringed-focus focus:border-primary focus:ring-inset active:shadow-none"
         defaultValue={i18n.resolvedLanguage}
         onChange={onChangeSelectedLanguage}
       >

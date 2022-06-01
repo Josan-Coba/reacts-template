@@ -6,16 +6,18 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build": "webpack && prettier --write dist/index.html",
+    "build": "webpack",
+    "i18n:extract": "i18next",
     "serve": "webpack serve --mode=development",
-    "test": "npm run test:core",
-    "test:core": "ts-mocha -p tsconfig.json \"src/**/*.spec.ts\"",
+    "test": "npm run test:types && npm run test:lint && npm run test:specs && npm run test:prettier",
     "test:lint": "eslint \"./**/*.[tj]s?(x)\"",
     "test:prettier": "prettier --check .",
+    "test:specs": "ts-mocha -p tsconfig.json \"src/**/*.spec.ts\"",
     "test:test-types": "tsc --project tsconfig.tests.json --noEmit",
     "test:types": "tsc --project tsconfig.dev.json --noEmit"
   },
   "dependencies": {
+    "classnames": "2.3.1",
     "i18next": "21.8.0",
     "i18next-browser-languagedetector": "6.1.4",
     "react": "18.1.0",
@@ -47,6 +49,7 @@
     "eslint-webpack-plugin": "3.1.1",
     "favicons-webpack-plugin": "5.0.2",
     "html-webpack-plugin": "github:josan-coba/html-webpack-plugin",
+    "i18next-parser": "6.4.0",
     "mini-css-extract-plugin": "2.6.0",
     "mocha": "10.0.0",
     "postcss": "8.4.13",
@@ -58,7 +61,7 @@
     "tailwindcss": "3.0.24",
     "ts-loader": "9.3.0",
     "ts-mocha": "10.0.0",
-    "typescript": "4.6.4",
+    "typescript": "4.7.2",
     "webpack": "5.72.1",
     "webpack-cli": "4.9.2",
     "webpack-dev-server": "4.9.0"

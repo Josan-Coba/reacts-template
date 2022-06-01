@@ -140,7 +140,7 @@ module.exports = {
           'warn',
           {
             assertionStyle: 'as',
-            objectLiteralTypeAssertions: 'never',
+            objectLiteralTypeAssertions: 'allow-as-parameter',
           },
         ],
         '@typescript-eslint/consistent-type-imports': 'warn',

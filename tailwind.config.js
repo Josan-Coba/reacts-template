@@ -1,9 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 
-const COLOR_PRIMARY = '#FF92DA'
-const COLOR_SECONDARY = '#022702'
-const COLOR_SURFACE = '#FAFFFA'
+const COLOR_PRIMARY = '#077BBC'
+const COLOR_SECONDARY = '#021B27'
+const COLOR_SURFACE = '#FAFDFF'
 
 module.exports = {
   content: ['./src/**/*.{html,tsx}'],

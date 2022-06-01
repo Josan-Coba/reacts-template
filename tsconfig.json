@@ -12,6 +12,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "module": "commonjs",
+    "moduleResolution": "node",
     "outDir": "dist",
     "resolveJsonModule": true,
     "sourceMap": true,

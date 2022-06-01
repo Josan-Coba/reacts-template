@@ -1,8 +1,8 @@
 import i18next from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
-import messages_en from './translations/en.json'
-import messages_es from './translations/es.json'
+import messages_en from './locales/en_translation.json'
+import messages_es from './locales/es_translation.json'
 
 export type LocaleCode = 'en' | 'es'
 
@@ -25,12 +25,12 @@ export type LocaleList = readonly {
 const localeData: LocaleDataRecord = Object.freeze({
   en: Object.freeze<LocaleData>({
     code: 'en',
-    messages: messages_en,
+    messages: messages_en as MessagesRecord,
     ownDisplayName: 'English',
   }),
   es: Object.freeze<LocaleData>({
     code: 'es',
-    messages: messages_es,
+    messages: messages_es as MessagesRecord,
     ownDisplayName: 'Español',
   }),
 })

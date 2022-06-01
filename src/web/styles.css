@@ -5,7 +5,12 @@
 @layer base {
   html,
   body {
-    @apply bg-surface;
+    @apply bg-surface font-normal font-sans text-base;
+  }
+
+  a {
+    @apply font-semibold text-sky-900 hover:underline;
+    @apply focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-80 focus:ring-offset-surface focus:ring-offset-2;
   }
 
   .content-area {
