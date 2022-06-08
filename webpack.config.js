@@ -46,7 +46,8 @@ module.exports = {
           {
             loader: 'ts-loader',
             options: {
-              configFile: 'tsconfig.json',
+              configFile: 'tsconfig.build.json',
+              transpileOnly: process.env.NODE_ENV !== 'production',
             },
           },
         ],
@@ -102,7 +103,10 @@ module.exports = {
     publicPath: isProduction ? PRODUCTION_PUBLIC_PATH : '/',
   },
   plugins: [
-    new ESLintPlugin({ context: 'src/' }),
+    new ESLintPlugin({
+      context: 'src/',
+      failOnError: process.env.NODE_ENV === 'production',
+    }),
     new MiniCssExtractPlugin({
       chunkFilename: '[id].css',
       filename: 'artifacts/[name].css',

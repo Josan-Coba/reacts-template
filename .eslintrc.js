@@ -21,6 +21,15 @@ module.exports = {
         'prettier',
       ],
       files: ['*.ts', '*.tsx', '*.d.ts'],
+      overrides: [
+        {
+          files: ['*.spec.ts', '*.spec.tsx'],
+          rules: {
+            '@typescript-eslint/no-unused-expressions': 'off',
+            '@typescript-eslint/no-invalid-this': 'off',
+          },
+        },
+      ],
       parser: '@typescript-eslint/parser',
       parserOptions: {
         ecmaFeatures: {
@@ -28,6 +37,7 @@ module.exports = {
         },
         project: [
           'tsconfig.json',
+          'tsconfig.build.json',
           'tsconfig.tests.json',
           'cypress/tsconfig.json',
         ],
@@ -218,6 +228,12 @@ module.exports = {
             selector: 'objectLiteralProperty',
             format: ['camelCase', 'PascalCase'],
             leadingUnderscore: 'allowSingleOrDouble',
+          },
+          {
+            selector: 'parameter',
+            format: ['camelCase'],
+            leadingUnderscore: 'allow',
+            trailingUnderscore: 'allow',
           },
         ],
         '@typescript-eslint/no-extraneous-class': 'error',

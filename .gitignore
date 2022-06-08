@@ -44,3 +44,5 @@ node_modules/
 # Outputs
 /dist
 /src/i18n/compiled-translations
+
+.vscode
